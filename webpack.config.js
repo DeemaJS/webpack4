@@ -13,7 +13,7 @@ module.exports = {
 
     loaders: [{
       test:   /\.js$/,
-      loader: "babel?presets[]=es2015"
+      loader: "babel"
     }, {
       test:   /\.jade$/,
       loader: "jade"
