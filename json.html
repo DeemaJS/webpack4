@@ -10,20 +10,33 @@
 <div id="placeholder"></div>
 
 <script>
+    var data = { "users":[
+            {
+                "firstName":"Ray",
+                "lastName":"Villalobos",
+                "joined": {
+                    "month":"January",
+                    "day":12,
+                    "year":2012
+                }
+            },
+            {
+                "firstName":"John",
+                "lastName":"Jones",
+                "joined": {
+                    "month":"April",
+                    "day":28,
+                    "year":2010
+                }
+            }
+    ]}
 
-var data = {"users":[
-  	{
-      "firstName": "Ray",
-      "lastName": "Lee",
-      "join": 2012
-    },
-    {
-      "firstName": "lee",
-      "lastName": "Rayen",
-      "join": 2011
+    var output="<ul>";
+    for (var i in data.users) {
+        output+="<li>" + data.users[i].firstName + " " + data.users[i].lastName + "--" + data.users[i].joined.month+"</li>";
     }
-]}
-document.getElementById("placeholder").innerHTML = data.users[1].firstName + " " + data.users[1].lastName + " " + data.users[1].join;  
+    output+="</ul>";
 
+    document.getElementById("placeholder").innerHTML=output;
 </script>
 </body></html>
