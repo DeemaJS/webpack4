@@ -8,13 +8,22 @@
 <body>
 
 <div id="placeholder"></div>
+
 <script>
-  var data = {
-    "firstName": "Ray",
-    "LastName": "Lee",
-    "join": 2012
-  };
-document.getElementById("placeholder").innerHTML = data.firstName;  
+
+var data = {"users":[
+  	{
+      "firstName": "Ray",
+      "lastName": "Lee",
+      "join": 2012
+    },
+    {
+      "firstName": "lee",
+      "lastName": "Rayen",
+      "join": 2011
+    }
+]}
+document.getElementById("placeholder").innerHTML = data.users[1].firstName + " " + data.users[1].lastName + " " + data.users[1].join;  
 
 </script>
 </body></html>
